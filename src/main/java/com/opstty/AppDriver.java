@@ -1,6 +1,7 @@
 package com.opstty;
 
 import com.opstty.job.*;
+import com.opstty.mapper.HeightSortMapper;
 import org.apache.hadoop.util.ProgramDriver;
 
 public class AppDriver {
@@ -19,6 +20,8 @@ public class AppDriver {
                     "A map/reduce program that counts the number of all occuring species of trees.");
             programDriver.addClass("maxheight", KindHeight.class,
                     "A map/reduce program that computes the maximum height per kind of tree.");
+            programDriver.addClass("heightsort", HeightSort.class,
+                    "A map/reduce program that that sorts the heights of trees.");
             exitCode = programDriver.run(argv);
         } catch (Throwable throwable) {
             throwable.printStackTrace();
