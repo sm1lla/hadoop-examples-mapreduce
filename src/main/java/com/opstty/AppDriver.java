@@ -24,6 +24,8 @@ public class AppDriver {
                     "A map/reduce program that that sorts the heights of trees.");
             programDriver.addClass("oldesttree", OldestTree.class,
                     "A map/reduce program that that sorts the heights of trees.");
+            programDriver.addClass("maxtrees", DistrictTreesCount.class,
+                    "A map/reduce program that outputs the district with the most trees.");
             exitCode = programDriver.run(argv);
         } catch (Throwable throwable) {
             throwable.printStackTrace();
